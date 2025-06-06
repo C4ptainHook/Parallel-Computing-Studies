@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix Multiplication | Parallel Computing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>⚡ Matrix Multiplication Lab</h1>
+        
+        <div class="main-content">
+            <div class="control-panel">
+                <h2>🎛️ Control Panel</h2>
+                
+                <div class="matrix-input-section">
+                    <h3>📊 Matrix Dimensions</h3>
+                    
+                    <div class="input-group">
+                        <label for="rows1">Matrix A:</label>
+                        <div class="input-row">
+                            <input type="number" id="rows1" min="1" value="3" placeholder="Rows">
+                            <span class="multiplication-sign">×</span>
+                            <input type="number" id="cols1" min="1" value="3" placeholder="Cols">
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="rows2">Matrix B:</label>
+                        <div class="input-row">
+                            <input type="number" id="rows2" min="1" value="3" placeholder="Rows">
+                            <span class="multiplication-sign">×</span>
+                            <input type="number" id="cols2" min="1" value="3" placeholder="Cols">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="buttons">
+                    <button id="multiply-server">🖥️ Server Generated Matrices</button>
+                    <button id="generate-send">🎲 Client Generated Matrices</button>
+                </div>
+            </div>
+            
+            <div class="result-panel">
+                <h2>📈 Results</h2>
+                <div class="loading" id="loading">Computing matrices...</div>
+                <div class="result" id="result"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="config.js"></script>
+    <script src="matrix-utils.js"></script>
+    <script src="api-service.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
